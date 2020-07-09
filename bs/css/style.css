@@ -1,0 +1,328 @@
+/*
+* @author Eric
+* @version 0.3
+*/
+
+/* ========================= layout ======================== */
+header{
+    background-color: rgb(72, 72, 224);
+}
+
+/* -- Fontes -- */
+@font-face {
+	font-family: FontTexto;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/Roboto_Slab/RobotoSlab-Regular.ttf');
+}
+
+
+/* -- Menu -- */
+.corbarra{
+    background-color: rgba(255, 255, 255, 1.0);
+    padding: 5px 0;
+    margin-bottom: 0px;
+}
+.marcador {
+    border: 1px solid #f94646;
+}
+.fonte1{
+    font-family: FontTexto;
+}
+
+/* -- Sessao 1 -- */
+#titulo_p1{
+    padding-top: 120px;
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+    padding-bottom: 100px;
+}
+#selecionar_materia{
+    background-color: white;
+    border-radius: 50px;
+    padding: 15px;
+    border: none;
+    box-shadow: none;
+}
+#selecionar_materia select {
+    box-shadow: none;
+}
+.selecionar_materia{
+    background-color: white;
+    border-radius: 50px;
+}
+.sessao1{
+    padding: 70px;
+}
+.btn_buscar{
+    margin-left: 20px;
+    border: none;
+    background-color: white;
+    padding: 22px 25px 22px 25px;
+    border-radius: 100px;
+    font-weight: bold;
+    align-content: center;
+}
+.alinhamento_btn{
+    margin: auto;
+}
+.borderclear{
+    border: none;
+}
+
+#area_busca{
+	font-family: FontTexto;
+}
+
+/* -- Planos -- */
+.espacos {
+	padding-bottom: 30px;
+}
+#planos {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.titulo-planos h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 45px;
+	padding-top: 80px;
+	margin: -20px;
+}
+.titulo-planos h3 {
+	text-align: center;
+	color: #777;
+	padding-bottom: 30px;
+}
+
+/* -- Serviços -- */
+#servicos {
+	background: #ffffff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.servicos {
+	padding: 10px 0px 10px 0px;
+}
+.img-tamanho {
+	width: 70px;
+	height: 70px;
+	margin: 0px auto;
+}
+.circulo-servicos {
+	background: #33aced;
+	width: 150px;
+	height: 150px;
+	margin: auto;
+	border-radius: 500px;
+	padding: 40px 0px 0px 0px;
+} 
+.circulo-servicos:hover {
+	background: #dc85ff;
+	transition: background 0.7s, color 0.7s;
+} 
+#servicos h2 {
+	font-size: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: -8px;
+	padding-top: 20px;
+}
+#servicos h3 {
+	text-align: center;
+}
+.servicos-h2 {
+	padding: 40px 0px 90px 0px;
+}
+.servicos-h2 h3 {
+	padding: 0px 0px 0px 0px;
+	color: #777;
+}
+.servico-1 h3 {
+	font-family: FontTexto, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+.servico-1 h4 {
+	font-family: FontTexto, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #777;
+	text-align: center;
+	padding: 0px 0px 30px 0px;
+}
+.servico-1{
+	padding-bottom: 30px;
+}
+
+
+/* -- Tipografia -- */
+h2 {
+	font-family: FontTexto;
+	color: rgb(96, 138, 160);
+	font-size: 30px;
+}
+h3 {
+	font-family: FontTexto;
+	font-size: 17.5px;
+	padding: 15px 0px 0px 0px;
+}
+
+/* -- Como Funciona -- */
+#como_funciona {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.titulo-como_funciona h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 45px;
+	padding-top: 80px;
+	margin: -20px;
+	padding-bottom: 80px;
+}
+
+/* -- Contato -- */
+#contato {
+	background-color: #413d3d;
+	background-size: cover;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+	background-repeat:none;
+	background-attachment:scroll;
+	background-position: center center;
+	text-align:center;
+	/*border-bottom-left-radius: 200px;*/
+}
+.titulo-contato h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 45px;
+	padding-top: 150px;
+	margin: -20px;
+}
+.titulo-contato h3 {
+	text-align: center;
+	color: #777;
+	padding-bottom: 70px;
+}
+section#contato .form-group input.form-control {
+	height: auto;
+}
+section#contato .form-group input {
+	padding: 24px;
+}
+section#contato .form-group textarea.form-control {
+    height: 241px;
+}
+.btn-contato {
+	background: #ff7b00;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	transition: background 0.8s, color 0.8s; 
+}
+.btn-contato:hover {
+	background: #413d3d;
+	color: rgb(201, 181, 181);
+}
+.submit-contato {
+	padding-top: 30px;
+	padding-bottom: 80px;
+}
+
+/* -- Rodapé -- */
+#rodape {
+	background: white;
+	padding-top: 0px;
+	padding-bottom: 12px;
+	border-bottom: 6px solid #ec5252;
+}
+
+/* -- Criar Conta -- */
+#criar_conta{
+	background-color: rgb(72, 72, 224);
+}
+#titulo_c1{
+  padding-top: 80px;
+  color: white;
+  font-size: 55px;
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+
+/* -- Seja Professor -- */
+#titulo_s1{
+  padding-top: 60px;
+  color: white;
+  font-size: 55px;
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+
+/* -- DashBoard -- */
+#titulo_d1{
+  padding-top: 40px;
+  color: white;
+  font-size: 55px;
+  font-weight: bold;
+	padding-bottom: 40px;
+}
+#meus_cursos h3{
+	font-size: 20px;
+	font-family: FontTexto;
+	padding: 0px;
+	margin: 0px;
+}
+#meus_cursos h2{
+	color: black;
+	/*00E88F*/
+}
+#meus_cursos{
+	background-color: white;/*rgb(10, 240, 152);*/
+}
+#meus_cursos hr{
+	margin-top: 0px;
+}
+#marca_aula{
+	margin: 0 20px;
+}
+#area_aulas_marcadas hr{
+	margin: 0px;
+}
+#area_info_plano hr{
+	margin: 0px;
+}
+#paginacao{
+	text-align: center;
+}
+.espaco{
+	padding-top: 20px;
+}
+
+/* -- Codigo -- */
+#hr_codigo{
+	margin: 0px;
+	padding: 0px;
+}
+
+#area_input_codigo{
+	background-color: rgb(72, 72, 224);
+	padding-top: 0px;
+	padding-bottom: 44vh;
+}
+
+/* -- Login Admin -- */
+#area_input_admin{
+	background-color: rgb(72, 72, 224);
+	padding-top: 50px;
+	padding-bottom: 25vh;
+}
+
+
+/* -- Admin Dash -- */
+
+
