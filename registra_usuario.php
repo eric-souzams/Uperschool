@@ -16,7 +16,7 @@ $link = $linkobjdb->conexaoMysql();
 
 $existe_usuario = false;
 
-//verifica se email ja existe no banco de dados
+//verifica se usuario ja existe no banco de dados
 $sql = "SELECT * from up_usuarios WHERE usuario='$usuario'";
 if($resultado_id = mysqli_query($link, $sql)){
     

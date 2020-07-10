@@ -1,8 +1,14 @@
 <?php
     session_start();
     if(!isset($_SESSION['usuario'])){
-        header('location: index.php?erro_login=1');
+        header('location: index.php?erro_user=1');
     }
+
+    $nivel_permissao = $_SESSION['nivel'];
+    if($nivel_permissao != '2'){
+        header('location: index.php?erro_not_permited=2');
+    }
+
     require_once('../db.php');
 
     $linkobjdb = new db();
@@ -35,29 +41,6 @@
     <script>
     $(document).ready(function(){
 
-        /*function atualizaAulas(){
-            //carregar aulas marcadas
-            $.ajax({
-                url: 'get_aulas_marcadas.php',
-                success: function(data){
-                    $('#aulas_marcadas').html(data);
-                }
-            });
-        }
-
-        function dadosPlano(){
-            //carregar aulas marcadas
-            $.ajax({
-                url: 'get_meu_plano.php',
-                success: function(data){
-                    $('#info_plano').html(data);
-                }
-            });
-        }
-
-        dadosPlano();
-        atualizaAulas();*/
-
     });
     </script>
 </head>
@@ -78,9 +61,7 @@
               
             <div id="navbar" class="navbar-collapse collapse fonte1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="#">Nada</a></li>
-                    <li><a href="#">Nada</a></li>
-                    <li><a href="#">Nada</a></li>
+                    <!--<li><a href="#">lorem ipsun</a></li>-->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="../logout.php">Fazer Logout</a></li>
@@ -115,7 +96,7 @@
                             <h3><center>Código de Primeiro Acesso</center></h3>
                         </div>
                         <hr>
-                        <div id="#" class="form-group">
+                        <div id="area_gerar_codigo" class="form-group">
                             <form method="post" action="gerar_codigo.php" id="gerar_codigo">
                                 <button type="submit" class="btn btn-primary btn-group-justified" id="btn_marca_aula">Gerar Código</button>
                                 <br><br>
@@ -126,11 +107,49 @@
                 <div class="col-md-4" id="#">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3><center>Espaço Vazio</center></h3>
+                            <h3><center>Cadastro de Professor</center></h3>
                         </div>
                         <hr>
-                        <div id="#">
-                            
+                        <div id="area_cadastro_professor">
+                            <form method="post" action="cadastrar_professor.php" id="cadatrar_professor">
+                                Estado
+                                <br>
+                                <input class="form-control" type="text" name="estado" required>
+                                <br>
+                                Cidade
+                                <br>
+                                <input class="form-control" type="text" name="cidade" required>
+                                <br>
+                                Matéria que será lecionada
+                                <br>
+                                <select class="form-control" name="materia" id="materiaselect" required>
+                                    <option value="null">Selecione a matéria</option>
+                                    <option value="Geografia">Geografia</option>
+                                    <option value="Fisica 1">Física 1</option>
+                                    <option value="Fisica 2">Fisica 2</option>
+                                    <option value="Historia">Hístoria</option>
+                                    <option value="Literatura">Literatura</option>
+                                    <option value="Matematica 1">Matematica 1</option>
+                                    <option value="Matematica 2">Matematica 2</option>
+                                    <option value="Portugues">Portugues</option>
+                                    <option value="Ciencias">Ciencias</option>
+                                    <option value="Ingles">Inglês</option>
+                                    <option value="Quimica 1">Quimica 1</option>
+                                    <option value="Quimica 2">Quimica 2</option>
+                                    <option value="Biologia 1">Biologia 1</option>
+                                    <option value="Biologia 2">Biologia 2</option>
+                                </select>
+                                <br>
+                                Nome do Professor
+                                <br>
+                                <input class="form-control" type="text" name="nome_professor" required>
+                                <br>
+                                Outras matérias aplicaveis
+                                <br>
+                                <input class="form-control" type="text" name="materia_aplicaveis" required>
+                                <br>
+                                <button type="submit" class="btn btn-primary btn-group-justified" id="btn_cadastro_prof">Fazer Cadastro</button>
+                            </form>
                         </div>
                     </div>
                 </div>

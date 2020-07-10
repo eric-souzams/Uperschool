@@ -41,7 +41,7 @@
         <div class="container"> <!--container 1-->
             <div class="row"> <!--row-->
                 <div class="col-md-12">
-                    <h1 id="titulo_s1">Painel de Administrador</h1>
+                    <h1 id="titulo_s1">Painel de Admin</h1>
                 </div>
             </div><!--/row-->
 

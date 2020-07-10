@@ -4,6 +4,10 @@ session_start();
 if(!isset($_SESSION['usuario'])){
     header('location: dashboard.php?erro_gerar_codigo=1');
 }
+$nivel_permissao = $_SESSION['nivel'];
+if($nivel_permissao != '2'){
+    header('location: index.php?erro_not_permited=2');
+}
 
 require_once('../db.php');
 

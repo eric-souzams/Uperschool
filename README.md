@@ -1,7 +1,7 @@
 # UperSchool - AulasReforco
 
 <h1 align="center">
-    <img alt="UperSchool" title="#UperSchool" src="#" width="250px" />
+    <img alt="UperSchool" title="#UperSchool" src="img/logo.png" width="250px" />
 </h1>
 
 ## Proposta
@@ -15,5 +15,7 @@
 
 ## Features
 * Admin Panel
-* Code to first acess generator
-* Acess level
+* Code to first access generator
+* Level to access
+* Acess validation
+* Teacher registration
