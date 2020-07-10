@@ -3,7 +3,7 @@
     if(!isset($_SESSION['usuario'])){
         header('location: index.php?erro_login=1');
     }
-    require_once('db.php');
+    require_once('../db.php');
 
     $linkobjdb = new db();
     $link = $linkobjdb->conexaoMysql();
@@ -29,13 +29,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UperSchool - DashBoard</title>
-    <script src="bs/js/jquery-2.2.4.js"></script>
-    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bs/css/style.css">
+    <script src="../bs/js/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="../bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bs/css/style.css">
     <script>
     $(document).ready(function(){
 
-        function atualizaAulas(){
+        /*function atualizaAulas(){
             //carregar aulas marcadas
             $.ajax({
                 url: 'get_aulas_marcadas.php',
@@ -56,7 +56,7 @@
         }
 
         dadosPlano();
-        atualizaAulas();
+        atualizaAulas();*/
 
     });
     </script>
@@ -78,10 +78,12 @@
               
             <div id="navbar" class="navbar-collapse collapse fonte1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="historico.php">Histórico de Aulas</a></li>
+                    <li><a href="#">Nada</a></li>
+                    <li><a href="#">Nada</a></li>
+                    <li><a href="#">Nada</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="logout.php">Fazer Logout</a></li>
+                    <li><a href="../logout.php">Fazer Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -102,74 +104,44 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    <h2>Minhas Informações</h2>
+                    <h2>Ferramentas Disponíveis</h2>
                     <div class="panel">
                     </div>
                 </div>
 
-                <div class="col-md-4" id="area_info_plano">
+                <div class="col-md-4" id="#">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3><center>Plano Atual</center></h3>
+                            <h3><center>Código de Primeiro Acesso</center></h3>
                         </div>
                         <hr>
-                        <div id="info_plano">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h3><center>Marcar Proxima Aula</center></h3>
-                        </div>
-                        <hr>
-                        <div id="marca_aula" class="form-group">
-                            <form method="post" action="marca_aula.php" id="form_marca_aula">
-                                Selecione o dia
-                                <br>
-                                <input class="form-control" type="date" name="data_marcada" required>
-                                <br>
-                                Selecione a hora
-                                <br>
-                                <input class="form-control" type="time" name="hora_marcada" required>
-                                <br>
-                                Selecione a matéria
-                                <br>
-                                <select name="materia" id="materiaselect" class="form-control">
-                                    <option value="null">Selecione a matéria</option>
-                                    <option value="Geografia">Geografia</option>
-                                    <option value="Fisica 1">Física 1</option>
-                                    <option value="Fisica 2">Fisica 2</option>
-                                    <option value="Historia">Hístoria</option>
-                                    <option value="Literatura">Literatura</option>
-                                    <option value="Matematica 1">Matematica 1</option>
-                                    <option value="Matematica 2">Matematica 2</option>
-                                    <option value="Portugues">Portugues</option>
-                                    <option value="Ciencias">Ciencias</option>
-                                    <option value="Ingles">Inglês</option>
-                                    <option value="Quimica 1">Quimica 1</option>
-                                    <option value="Quimica 2">Quimica 2</option>
-                                    <option value="Biologia 1">Biologia 1</option>
-                                    <option value="Biologia 2">Biologia 2</option>
-                                </select>
-                                <br>
-                                <button type="submit" class="btn btn-primary btn-group-justified" id="btn_marca_aula">Marcar Aula</button>
+                        <div id="#" class="form-group">
+                            <form method="post" action="gerar_codigo.php" id="gerar_codigo">
+                                <button type="submit" class="btn btn-primary btn-group-justified" id="btn_marca_aula">Gerar Código</button>
                                 <br><br>
                             </form>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4" id="area_aulas_marcadas">
+                <div class="col-md-4" id="#">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3><center>Aulas Marcadas</center></h3>
+                            <h3><center>Espaço Vazio</center></h3>
                         </div>
                         <hr>
-                        <div id="aulas_marcadas">
-
+                        <div id="#">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" id="#">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h3><center>Espaço Vazio</center></h3>
+                        </div>
+                        <hr>
+                        <div id="#">
+                            
                         </div>
                     </div>
                 </div>
@@ -214,6 +186,6 @@
             </div> <!-- /Container -->
         </footer> <!-- /Rodapé -->
 
-    <script src="bs/js/bootstrap.min.js"></script>
+    <script src="../bs/js/bootstrap.min.js"></script>
 </body>
 </html>

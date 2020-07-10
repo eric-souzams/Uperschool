@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UperSchool - Reforço Escolar</title>
-    <script src="bs/js/jquery-2.2.4.js"></script>
-    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bs/css/style.css">
+    <script src="../bs/js/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="../bs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bs/css/style.css">
 </head>
 <body>
     <!-- Barra do menu -->
@@ -20,13 +20,13 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand fonte1" href="index.php">UperSchool</a>
+                <a class="navbar-brand fonte1" href="../index.php">UperSchool</a>
                 <!-- LOGO DO SITE <img src="imagens/logo.png" /> -->
             </div>
               
             <div id="navbar" class="navbar-collapse collapse fonte1">
                 <ul class="nav navbar-nav navbar-left">
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="../index.php">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -104,6 +104,6 @@
             </div> <!-- /Container -->
         </footer> <!-- /Rodapé -->
 
-    <script src="bs/js/bootstrap.min.js"></script>
+    <script src="../bs/js/bootstrap.min.js"></script>
 </body>
 </html>

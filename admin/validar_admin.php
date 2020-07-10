@@ -1,11 +1,11 @@
 <?php
     session_start();
-    require_once('db.php');
+    require_once('../db.php');
 
     $usuario = $_POST['usuario'];
     $senha = md5($_POST['senha']);
 
-    $sql = "SELECT id, usuario, nivelpermissao FROM up_usuarios WHERE usuario='$usuario' AND senha='$senha'";
+    $sql = "SELECT id, usuario, nivelpermissao FROM up_usuarios WHERE usuario='$usuario' AND senha='$senha' AND nivelpermissao='2'";
 
     $linkobjdb = new db();
     $link = $linkobjdb->conexaoMysql();
@@ -26,4 +26,5 @@
     } else{
         echo 'Error durante a consulta ao Banco de Dados. Por favor, contate o suporte.';
     }
+    mysqli_close($link);
 ?>

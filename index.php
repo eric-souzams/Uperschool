@@ -31,7 +31,7 @@ require_once('db.php');
 </head>
 <body>
     <!-- Barra do menu -->
-    <nav class="navbar navbar-default navbar-static-top corbarra">
+    <nav class="navbar navbar-default navbar-fixed-top corbarra">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -40,7 +40,7 @@ require_once('db.php');
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand fonte1" href="index.php">UperSchool</a>
+                <a class="navbar-brand fonte1" href="#top">UperSchool</a>
                 <!-- LOGO DO SITE <img src="imagens/logo.png" /> -->
             </div>
               
@@ -105,7 +105,7 @@ require_once('db.php');
                             <option value="null">Selecione a Cidade</option>
                             <option value="Taguatinga">Taguatinga</option>
                             <option value="Ceilandia">Ceilandia</option>
-                            <option value="Sao Sebastiao">São Sebastião</option>
+                            <option value="Samambaia">Samambaia</option>
                             <option value="Riacho Fundo">Riacho Fundo</option>
                         </select>
                         
@@ -131,7 +131,7 @@ require_once('db.php');
                         <button type="submit" class="btn_buscar">Buscar Professores</button>
                         </div>
                     </form>
-                                    </div>
+                </div>
             </div> <!--/row-->
             <div class="row">
             <div id="area_busca">
