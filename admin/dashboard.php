@@ -100,8 +100,33 @@
                         <div id="area_gerar_codigo" class="form-group">
                             <form method="post" action="gerar_codigo.php" id="gerar_codigo">
                                 <button type="submit" class="btn btn-primary btn-group-justified" id="btn_marca_aula">Gerar Código</button>
-                                <br><br>
+                                <br>
                             </form>
+                        </div>
+                        <div class="panel-body">
+                            <h3><center>Códigos de Acesso Disponíveis</center></h3>
+                        </div>
+                    
+                        <div class="panel-body">
+                            <?php
+                            $linkobjdb = new db();
+                            $link = $linkobjdb->conexaoMysql();
+
+                            $sql = "SELECT codigo_acesso FROM up_codigos_usuarios";
+
+                            $resultado_id = mysqli_query($link, $sql);
+
+                            if($resultado_id){
+
+                                while($registro = mysqli_fetch_array($resultado_id, MYSQLI_ASSOC)){
+                                    echo '<p><h4> Código: '.$registro['codigo_acesso'].'<h4></p>';
+                                }
+
+                            } else{
+                                echo 'Erro ao tentar consultar lista de planos disponiveis';
+                            }
+                            mysqli_close($link);
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -157,11 +182,25 @@
                 <div class="col-md-4" id="#">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <h3><center>Espaço Vazio</center></h3>
+                            <h3><center>Definir Plano</center></h3>
                         </div>
                         <hr>
                         <div id="#">
-                            
+                            <form method="post" action="definir_plano.php" id="cadatrar_professor">
+                                ID do usuario
+                                <br>
+                                <input class="form-control" type="text" name="id_usuario" required>
+                                <br>
+                                ID do plano
+                                <br>
+                                <input class="form-control" type="text" name="id_plano" required>
+                                <br>
+                                Data de Vencimento
+                                <br>
+                                <input class="form-control" type="date" name="validade_plano" required>
+                                <br>
+                                <button type="submit" class="btn btn-primary btn-group-justified" id="btn_cadastro_prof">Salvar</button>
+                            </form>
                         </div>
                     </div>
                 </div>
