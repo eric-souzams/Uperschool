@@ -23,4 +23,5 @@
     } else{
         echo 'Error durante a consulta ao Banco de Dados. Por favor, contate o suporte.';
     }
+    mysqli_close($link);
 ?>

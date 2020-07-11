@@ -27,6 +27,6 @@ $link = $linkobjdb->conexaoMysql();
 $sql = "INSERT INTO up_lista_professores (estado, cidade, materia, nome_professor, materia_aplicaveis) VALUES ('$estado', '$cidade', '$materia', '$nome_professor', '$materia_aplicaveis')";
 
 mysqli_query($link, $sql);
-
+mysqli_close($link);
 header('location: dashboard.php?cadastro_sucesso=1&');
 ?>

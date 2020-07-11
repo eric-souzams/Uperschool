@@ -20,6 +20,7 @@
     } else{
         echo 'Error ao tentar executar a query.';
     }
+    mysqli_close($link);
 ?>
 
 <!DOCTYPE html>

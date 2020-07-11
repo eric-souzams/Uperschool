@@ -16,7 +16,7 @@ $link = $linkobjdb->conexaoMysql();
 
 $existe_usuario = false;
 
-//verifica se usuario ja existe no banco de dados
+//check if user already exist into data base
 $sql = "SELECT * from up_usuarios WHERE usuario='$usuario'";
 if($resultado_id = mysqli_query($link, $sql)){
     
@@ -29,7 +29,7 @@ if($resultado_id = mysqli_query($link, $sql)){
     }
 }
 
-//mostrar na url que existe o usuario
+//show in url that user exist 
 if($existe_usuario){
     $retorno_no_get = '';
     if($existe_usuario){
@@ -41,7 +41,7 @@ if($existe_usuario){
 
 $sql = "INSERT INTO up_usuarios (nome, usuario, senha) VALUES ('$nome', '$usuario', '$senha')";
 
-//executar a query
+//execute the query
 if(mysqli_query($link, $sql)){
             
         $sql2 = "DELETE FROM up_codigos_usuarios WHERE codigo_acesso = '$codigo_acesso' ";

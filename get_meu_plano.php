@@ -32,5 +32,5 @@ if($resultado_id){
 } else{
     echo 'Erro ao tentar consultar seu plano';
 }
-
+mysqli_close($link);
 ?>

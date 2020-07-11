@@ -14,18 +14,6 @@ require_once('db.php');
     <script>
         $(document).ready(function(){
 
-            /*function dadosPlano(){
-                //carregar aulas marcadas
-                $.ajax({
-                    url: 'get_planos.php',
-                    success: function(data){
-                        $('#plano').html(data);
-                    }
-                });
-            }
-
-            dadosPlano();*/
-
         });
     </script>
 </head>
@@ -53,7 +41,6 @@ require_once('db.php');
                     <li><a href="primeiroacesso.php">Primeiro Acesso</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <!--<li><a href="#">Criar Conta</a></li>-->
                     <li>
                         <a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Painel do Aluno</a>
                             <ul class="dropdown-menu" aria-labelledby="entrar">
@@ -153,7 +140,7 @@ require_once('db.php');
                                 echo '<br>';
                                 echo '<div class="list-group-item">';
                                     echo '<strong>'.$resultado['nome_professor'].'</strong>';
-                                    echo '<h5 class="list-group-item-text pull-right">Professor desde: '.$resultado['professor_desde'].'</h5>';
+                                    //echo '<h5 class="list-group-item-text pull-right">Professor desde: '.$resultado['professor_desde'].'</h5>';
                                     echo '<h5 class="list-group-item-text"> Matéria Selecionada: '.$resultado['materia'].'</h5>';
                                     echo '<h5 class="list-group-item-text"> Outras matérias aplicada por esta professor: '.$resultado['materia_aplicaveis'].'<h5>';
                                     echo '<h5 class="list-group-item-text"> Estado Selecionado: '.$resultado['estado'].'</h5>';
@@ -322,23 +309,6 @@ require_once('db.php');
                         }
                         mysqli_close($link);
                     ?>
-
-                        
-                        <!--
-                        <div class="col-md-4 col-sm-6 espacos">
-                            <div>
-                                <img src="img/fundo.png" class="img-responsive">
-                            </div>
-                            <div class="port-1" id="plano">
-                                <h4>Plano nº 1</h4>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6 espacos"><div><img src="img/fundo.png" class="img-responsive"></div><div class="port-1" id="plano_1"><h4>Plano nº 1</h4></div></div>
-
-                        -->
-
-                       
                         
                     </div> <!-- /Row -->
                 </div>

@@ -37,11 +37,11 @@
                                     <br/>
                                         <form method="POST" action="validar_login.php" id="formLogin">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" id="campo_usuario" name="campo_usuario" placeholder="Usuario" required>
+                                                <input type="text" class="form-control" id="campo_usuario" name="usuario" placeholder="Usuario" required>
                                             </div>
                                             
                                             <div class="form-group">
-                                                <input type="password" class="form-control" id="campo_senha" name="campo_senha" placeholder="Senha" required>
+                                                <input type="password" class="form-control" id="campo_senha" name="senha" placeholder="Senha" required>
                                             </div>
                                             
                                             <button type="buttom" class="btn btn-default" id="btn_login">Entrar</button>

@@ -22,6 +22,6 @@ $link = $linkobjdb->conexaoMysql();
 $sql = "INSERT INTO up_aulas_marcadas (id_usuario, materia, data_marcada, hora_marcada)VALUES($id_usuario, '$materia', '$data_marcada', '$hora_marcada')";
 
 mysqli_query($link, $sql);
-
+mysqli_close($link);
 header('location: dashboard.php?marcado_sucesso=1&');
 ?>

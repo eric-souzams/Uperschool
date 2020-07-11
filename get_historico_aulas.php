@@ -31,5 +31,5 @@ if($resultado_id){
 } else{
     echo 'Erro ao tentar consultar aulas marcadas';
 }
-
+mysqli_close($link);
 ?>
